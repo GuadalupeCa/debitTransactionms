@@ -12,7 +12,7 @@
 	<artifactId>debitTransactionms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>debitTransactionms</name>
-	<description>Demo project for transactinos of debits account.</description>
+	<description>Demo project for transactions of debits account.</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
@@ -57,6 +57,10 @@
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
