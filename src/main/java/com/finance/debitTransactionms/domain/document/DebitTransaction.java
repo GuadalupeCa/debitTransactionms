@@ -19,15 +19,13 @@ public class DebitTransaction {
     @Id
     private String id;
     private Debit debit;
-    private String account;
     private Double amount;
     private TypeTransaction typeTransaction;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createAt;
 
-    public DebitTransaction(Debit debit, String account, Double amount, TypeTransaction typeTransaction, Date createAt) {
+    public DebitTransaction(Debit debit, Double amount, TypeTransaction typeTransaction, Date createAt) {
         this.debit = debit;
-        this.account = account;
         this.amount = amount;
         this.typeTransaction = typeTransaction;
         this.createAt = createAt;

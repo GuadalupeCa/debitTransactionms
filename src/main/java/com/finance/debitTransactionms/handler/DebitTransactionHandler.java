@@ -43,7 +43,7 @@ public class DebitTransactionHandler {
         log.info("Save withdraw");
 
         Mono<Debit> debitData = debitTransaction.flatMap(d -> WebClient.builder().build().get()
-                .uri("http://localhost:8080/debit/account/{account}", d.getAccount())
+                .uri("http://localhost:8080/debit/account/{account}", d.getDebit().getAccount())
                 .retrieve()
                 .bodyToMono(Debit.class));
 
@@ -78,7 +78,7 @@ public class DebitTransactionHandler {
         log.info("Save withdraw");
 
         Mono<Debit> debitData = debitTransaction.flatMap(d -> WebClient.builder().build().get()
-                .uri("http://localhost:8080/debit/account/{account}", d.getAccount())
+                .uri("http://localhost:8080/debit/account/{account}", d.getDebit().getAccount())
                 .retrieve()
                 .bodyToMono(Debit.class));
 
@@ -108,9 +108,9 @@ public class DebitTransactionHandler {
                 .body(debitTransactionService.save(p), DebitTransaction.class));
     }
 
-    public Mono findByAccount (ServerRequest serverRequest) {
+    public Mono findByDebitAccount (ServerRequest serverRequest) {
         String account = serverRequest.pathVariable("account");
         log.info("Find by Id: {}", account);
-        return ServerResponse.ok().body(debitTransactionService.findByAccount(account), DebitTransaction.class);
+        return ServerResponse.ok().body(debitTransactionService.findByDebitAccount(account), DebitTransaction.class);
     }
 }

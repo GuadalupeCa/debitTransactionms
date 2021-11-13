@@ -38,7 +38,7 @@ public class DebitTransactionServiceImpl implements DebitTransactionService{
     }
 
     @Override
-    public Flux<DebitTransaction> findByAccount(String account) {
-        return debitTransactionService.findByAccount(account);
+    public Flux<DebitTransaction> findByDebitAccount(String account) {
+        return debitTransactionService.findByDebitAccount(account);
     }
 }

@@ -39,7 +39,7 @@ public class DebitTransactionImpl implements DebitTransactionRepository {
     }
 
     @Override
-    public Flux<DebitTransaction> findByAccount(String account) {
-        return debitTransactionRepositoryExt.findByAccount(account);
+    public Flux<DebitTransaction> findByDebitAccount(String account) {
+        return debitTransactionRepositoryExt.findByDebitAccount(account);
     }
 }
