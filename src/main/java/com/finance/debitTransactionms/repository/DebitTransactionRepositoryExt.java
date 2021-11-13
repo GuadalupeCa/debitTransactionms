@@ -6,5 +6,5 @@ import reactor.core.publisher.Flux;
 
 public interface DebitTransactionRepositoryExt extends ReactiveMongoRepository<DebitTransaction, String> {
     Flux<DebitTransaction> findByDebitClientDocumentIdentityNumber(String documentIdentityNumber);
-
+    Flux<DebitTransaction> findByAccount(String account);
 }

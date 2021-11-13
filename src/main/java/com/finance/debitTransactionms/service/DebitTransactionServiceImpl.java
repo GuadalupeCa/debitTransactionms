@@ -36,4 +36,9 @@ public class DebitTransactionServiceImpl implements DebitTransactionService{
     public Flux<DebitTransaction> findByCreditClientDocumentIdentityNumber(String documentIdentityNumber) {
         return debitTransactionService.findByCreditClientDocumentIdentityNumber(documentIdentityNumber);
     }
+
+    @Override
+    public Flux<DebitTransaction> findByAccount(String account) {
+        return debitTransactionService.findByAccount(account);
+    }
 }

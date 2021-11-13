@@ -10,4 +10,5 @@ public interface DebitTransactionService {
     Mono<DebitTransaction> save(DebitTransaction creditTransaction);
     Mono<Void> deleteById(String id);
     Flux<DebitTransaction> findByCreditClientDocumentIdentityNumber(String documentIdentityNumber);
+    Flux<DebitTransaction> findByAccount(String account);
 }
