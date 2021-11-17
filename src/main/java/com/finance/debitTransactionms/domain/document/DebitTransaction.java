@@ -21,13 +21,15 @@ public class DebitTransaction {
     private Debit debit;
     private Double amount;
     private TypeTransaction typeTransaction;
+    private String track;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createAt;
 
-    public DebitTransaction(Debit debit, Double amount, TypeTransaction typeTransaction, Date createAt) {
+    public DebitTransaction(Debit debit, Double amount, TypeTransaction typeTransaction, String track, Date createAt) {
         this.debit = debit;
         this.amount = amount;
         this.typeTransaction = typeTransaction;
+        this.track = track;
         this.createAt = createAt;
     }
 }

@@ -108,9 +108,9 @@ public class DebitTransactionHandler {
                 .body(debitTransactionService.save(p), DebitTransaction.class));
     }
 
-    public Mono findByDebitAccount (ServerRequest serverRequest) {
+    public Mono findByDebitAccount(ServerRequest serverRequest) {
         String account = serverRequest.pathVariable("account");
-        log.info("Find by Id: {}", account);
+        log.info("Find by Account: {}", account);
         return ServerResponse.ok().body(debitTransactionService.findByDebitAccount(account), DebitTransaction.class);
     }
 }
