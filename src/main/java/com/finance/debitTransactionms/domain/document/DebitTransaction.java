@@ -1,9 +1,7 @@
 package com.finance.debitTransactionms.domain.document;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,6 +12,8 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Document(collection = "debitTransaction")
 public class DebitTransaction {
     @Id

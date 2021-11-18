@@ -25,7 +25,7 @@ public class DebitTransactionHandler {
     private DebitTransactionService debitTransactionService;
 
     public Mono findAll(ServerRequest serverRequest) {
-        log.info("Find all clients");
+        log.info("Find all transaction");
         return ServerResponse.ok()
                 .body(debitTransactionService.findAll(), DebitTransaction.class);
     }
